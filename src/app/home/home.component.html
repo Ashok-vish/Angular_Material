@@ -1,0 +1,50 @@
+<!-- behaviour ragx /directive or asin pipe,parametreise non paraametrise -->
+
+<!-- <p> -->
+<div>
+    <mat-toolbar color="primary">
+        <div class="badge_button">
+            <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon fontIcon="menu"></mat-icon>
+            </button>
+        </div>
+        <span>
+            <pre>   Project</pre>
+        </span>
+
+        <!-- <mat-icon class="_home" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
+
+        <span class="example-spacer"></span>
+        <!-- <button class="_button">HOME</button> -->
+        <div class="_button"><button matBadge="1" matBadgeSize="small" matBadgeColor="warn"
+                routerLink="about">DETAILS</button></div>
+        <div class="_button"><button matBadge="7" matBadgeSize="small" matBadgeColor="warn"
+                routerLink="contact">CONTACT</button></div>
+    </mat-toolbar>
+</div>
+<!-- </p> -->
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" color="">
+        <!-- <p>Auto-resizing sidenav</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+        </button> -->
+        <!-- sidebar details using table -->
+        <table>
+            <thead>
+                <b>User_Name</b>
+            </thead><br><br>
+            <tr>Id No :-</tr><br>
+            <tr>Name :-</tr><br>
+            <tr>Phone Number :-</tr><br>
+            <tr>address :-</tr>
+        </table>
+    </mat-drawer>
+
+</mat-drawer-container>
+
+<mat-paginator class="paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25]"
+    aria-label="Select page">
+</mat-paginator>

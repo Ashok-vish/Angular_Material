@@ -1,4 +1,4 @@
-/* .example-spacer {
+.example-spacer {
     flex: 1 1 auto;
   }
 
@@ -10,21 +10,27 @@
   
   .example-sidenav-content {
     display: flex;
-    
+    /* justify-content: center;  */
   }
   
   .example-sidenav {
     padding: 20px;
+    background-color: whitesmoke;
   }
   element.style {
     margin-bottom: 0px;
 }
 
-p{
+div{
   margin-bottom: 0px;
 }
 
 .paginator{
   background-color: whitesmoke;
 
-} */
+}
+._button{
+    width: 6%;
+    text-shadow:medium;
+}
+
