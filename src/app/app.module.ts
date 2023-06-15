@@ -14,6 +14,8 @@ import { CONTACTComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
+import { TaskLifecycleComponent } from './task-lifecycle/task-lifecycle.component';
+import { TChildComponent } from './t-child/t-child.component';
 
 
 
@@ -23,7 +25,9 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     HomeComponent,
     CONTACTComponent,
-    AboutComponent
+    AboutComponent,
+    TaskLifecycleComponent,
+    TChildComponent
   ],
   imports: [
     BrowserModule,
