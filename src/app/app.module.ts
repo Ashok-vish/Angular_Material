@@ -16,6 +16,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
 import { TaskLifecycleComponent } from './task-lifecycle/task-lifecycle.component';
 import { TChildComponent } from './t-child/t-child.component';
+import { AppnotfoundComponent } from './appnotfound/appnotfound.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -27,7 +29,9 @@ import { TChildComponent } from './t-child/t-child.component';
     CONTACTComponent,
     AboutComponent,
     TaskLifecycleComponent,
-    TChildComponent
+    TChildComponent,
+    AppnotfoundComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -4,14 +4,19 @@ import { HomeComponent } from './home/home.component'
 import { CONTACTComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { TaskLifecycleComponent } from './task-lifecycle/task-lifecycle.component';
+import { AppnotfoundComponent } from './appnotfound/appnotfound.component';
+import { ProductComponent } from './product/product.component';
 
 
-
+// component:TaskLifecycleComponent, if we mention component path before child then we can't able to see child detail
 const routes: Routes = [
-{path:"",component:HomeComponent},
-{path:"contact",component:CONTACTComponent},
-{path:"about", component:AboutComponent},
-{path:"task",component:TaskLifecycleComponent},
+
+  { path: "task", children: [{ path: "product", component: ProductComponent }] },
+  { path: "", component: HomeComponent },
+  { path: "contact", component: CONTACTComponent },
+  { path: "about", component: AboutComponent },
+  // {path:"task",component:TaskLifecycleComponent},
+  { path: "**", component: AppnotfoundComponent },
 
 ];
 
