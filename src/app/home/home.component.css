@@ -31,7 +31,6 @@ div {
 
 }
 
-/* ._button {
-  width: 6%;
-  text-shadow: medium;
-} */
+mat-grid-tile {
+  background: lightblue;
+}

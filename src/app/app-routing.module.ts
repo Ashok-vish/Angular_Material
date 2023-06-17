@@ -6,6 +6,9 @@ import { AboutComponent } from './about/about.component';
 import { TaskLifecycleComponent } from './task-lifecycle/task-lifecycle.component';
 import { AppnotfoundComponent } from './appnotfound/appnotfound.component';
 import { ProductComponent } from './product/product.component';
+import { AdminComponent } from './admin/admin.component';
+import { adminGuardGuard } from './admin-guard.guard';
+import { FormsComponent } from './forms/forms/forms.component';
 
 
 // component:TaskLifecycleComponent, if we mention component path before child then we can't able to see child detail
@@ -15,8 +18,12 @@ const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "contact", component: CONTACTComponent },
   { path: "about", component: AboutComponent },
-  // {path:"task",component:TaskLifecycleComponent},
-  { path: "**", component: AppnotfoundComponent },
+  { path: "admin", component: AdminComponent, canActivate: [adminGuardGuard], redirectTo: "", pathMatch: "full" },
+
+  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
+  { path: "task", component: TaskLifecycleComponent },
+  // { path: "**", component: AppnotfoundComponent },
+  {path:"forms" ,component:FormsComponent }
 
 ];
 

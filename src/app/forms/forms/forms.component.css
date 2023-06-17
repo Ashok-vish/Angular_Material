@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.forms{
+    position: relative;
+    padding-left: 45%;
+    /* padding-top:  */
+}
+
+#passward{
+    padding-bottom: 10;
+}
+#username{
+    padding-top: 15% ;
+}

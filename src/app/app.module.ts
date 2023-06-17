@@ -8,7 +8,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+
 import { HomeComponent } from './home/home.component';
 import { CONTACTComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -18,6 +22,9 @@ import { TaskLifecycleComponent } from './task-lifecycle/task-lifecycle.componen
 import { TChildComponent } from './t-child/t-child.component';
 import { AppnotfoundComponent } from './appnotfound/appnotfound.component';
 import { ProductComponent } from './product/product.component';
+import { AdminComponent } from './admin/admin.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -31,7 +38,11 @@ import { ProductComponent } from './product/product.component';
     TaskLifecycleComponent,
     TChildComponent,
     AppnotfoundComponent,
-    ProductComponent
+    ProductComponent,
+    AdminComponent,
+    
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -43,7 +54,14 @@ import { ProductComponent } from './product/product.component';
     MatSidenavModule,
     MatPaginatorModule,
     MatBadgeModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule,
+    FormsModule,
+    MatFormFieldModule,
+    
+  
+    
+
   ],
 
 
