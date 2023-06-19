@@ -9,21 +9,31 @@ import { ProductComponent } from './product/product.component';
 import { AdminComponent } from './admin/admin.component';
 import { adminGuardGuard } from './admin-guard.guard';
 import { FormsComponent } from './forms/forms/forms.component';
+import { SignupComponent } from './signup/signup.component';
+
+
 
 
 // component:TaskLifecycleComponent, if we mention component path before child then we can't able to see child detail
 const routes: Routes = [
 
-  { path: "task", children: [{ path: "product", component: ProductComponent }] },
+  
   { path: "", component: HomeComponent },
   { path: "contact", component: CONTACTComponent },
   { path: "about", component: AboutComponent },
-  { path: "admin", component: AdminComponent, canActivate: [adminGuardGuard], redirectTo: "", pathMatch: "full" },
-
-  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   { path: "task", component: TaskLifecycleComponent },
-  // { path: "**", component: AppnotfoundComponent },
-  {path:"forms" ,component:FormsComponent }
+  {path:"forms" ,component:FormsComponent },
+  { path: "admin", component: AdminComponent , canActivate: [adminGuardGuard]  },
+  { path: "task", children: [{ path: "product", component: ProductComponent }] },
+  {path:"signup" , component: SignupComponent },
+  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
+
+  
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
+  // {path:"signup",redirectTo:"signup",pathMatch:'full'},
+  
+  
+  { path: "**", component: AppnotfoundComponent },
 
 ];
 

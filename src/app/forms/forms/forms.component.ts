@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 
 
@@ -9,11 +11,30 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css'],
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule],
+
 
 })
 export class FormsComponent {
+  email: string = '';
+  password: any = '';
+
+  signupform(signform:NgForm){
+    // console.log(signform.value.passwardfeild)
+  console.log(this.email)
+  // console.log(signform.value.emailfeild)
+  console.log(signform.value.passwardfeild)
+    // console.log(signform)
+  }
+
+  login=new FormGroup({
+    user:new FormControl(""),
+    passward:new FormControl("")
+    
+  })
+
+  submitdetail(){
+    console.log(this.login.value)
+  }
 
 }
 

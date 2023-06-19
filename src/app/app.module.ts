@@ -24,6 +24,9 @@ import { AppnotfoundComponent } from './appnotfound/appnotfound.component';
 import { ProductComponent } from './product/product.component';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
+import { FormsComponent } from './forms/forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -40,6 +43,10 @@ import { FormsModule } from '@angular/forms';
     AppnotfoundComponent,
     ProductComponent,
     AdminComponent,
+    FormsComponent,
+    SignupComponent,
+   
+    
     
     
     
@@ -57,9 +64,7 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatGridListModule,
     FormsModule,
-    MatFormFieldModule,
-    
-  
+    ReactiveFormsModule
     
 
   ],
