@@ -27,6 +27,8 @@ import { FormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { ObservalComponent } from './observal/observal/observal.component';
+import { ServicComponent } from './services/servic/servic.component';
 
 
 
@@ -45,6 +47,9 @@ import { SignupComponent } from './signup/signup.component';
     AdminComponent,
     FormsComponent,
     SignupComponent,
+    ObservalComponent,
+    CONTACTComponent,
+    ServicComponent,
    
     
     

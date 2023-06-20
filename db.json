@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "email": "json-server",
+      "passward": "typicode"
+    },
+    {
+      "id": 2,
+      "email": "ashok@gmail.com",
+      "passward": "12345678"
+    },
+    {
+      "id": 3,
+      "email": "abc@gmail.com",
+      "passward": "12345678"
+    },
+    {
+      "id": 4,
+      "email": "pqr@gmail.com",
+      "passward": "12345678"
+    }
+
+  ],
+  
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
