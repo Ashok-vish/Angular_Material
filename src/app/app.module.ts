@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { ObservalComponent } from './observal/observal/observal.component';
 import { ServicComponent } from './services/servic/servic.component';
+import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
 
 
 
@@ -50,6 +51,7 @@ import { ServicComponent } from './services/servic/servic.component';
     ObservalComponent,
     CONTACTComponent,
     ServicComponent,
+    DirectivetaskComponent,
    
     
     

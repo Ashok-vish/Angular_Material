@@ -13,6 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 import { Observable } from 'rxjs';
 import { ObservalComponent } from './observal/observal/observal.component';
 import { ServicComponent } from './services/servic/servic.component';
+import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
 
   
   { path: "", component: HomeComponent },
+  { path:"directive", component:DirectivetaskComponent },
   { path:"service", component: ServicComponent },
   {path:"obs",component:ObservalComponent },
   { path: "contact", component: CONTACTComponent },

@@ -8,11 +8,17 @@ import { ServiceService } from './service.service';
 })
 export class ServicComponent implements OnInit {
 
-  constructor( private ServiceService: ServiceService) { }
 
-detail:any
+  constructor( private ServiceService: ServiceService) { }
+  
+
+//  user=this.ServiceService.getfunction
+
+
+data:any
   ngOnInit(): void {
-    this.detail=this.ServiceService.getfunction
+    console.log(this.ServiceService.getfunction)
+   this.data=this.ServiceService.getfunction                     
   }
 
 }

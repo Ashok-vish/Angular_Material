@@ -7,7 +7,7 @@ export class ServiceService {
 
   constructor() { }
 
-  getfunction=[
+  getfunction =[
     {
       id: 1,
       email: "json-server",
@@ -28,7 +28,7 @@ export class ServiceService {
 
     // { "id": 1, "title": "lowdb is awesome" }
 
-  ]; 
+  ]
   
   
 
