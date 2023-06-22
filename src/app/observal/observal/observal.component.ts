@@ -19,13 +19,15 @@ export class ObservalComponent implements OnInit{
       }, 1000);
       setTimeout(() => {
         observer.next("processing")
-      }, 10000);
+      }, 2000);
       setTimeout(() => {
         observer.next("online")
-      }, 15000);
+      }, 3000);
+      setTimeout(() => {observer.error("please login first")}, 10000);
       setTimeout(() => {
         observer.complete()
       }, 20000);
+      
       
      })
     this.data.subscribe((x)=>{this.orderstatus=x})

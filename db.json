@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "email": "json-server",
+      "email": "json@gmail.com",
       "passward": "typicode"
     },
     {
@@ -20,6 +20,7 @@
       "email": "pqr@gmail.com",
       "passward": "12345678"
     }
+    
 
   ],
   

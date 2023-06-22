@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from './service.service';
 
+
 @Component({
   selector: 'app-servic',
   templateUrl: './servic.component.html',
@@ -14,11 +15,17 @@ export class ServicComponent implements OnInit {
 
 //  user=this.ServiceService.getfunction
 
+clientdetail:any=[]
 
-data:any
+// data:any
+// dataa:any=[]
+
   ngOnInit(): void {
-    console.log(this.ServiceService.getfunction)
-   this.data=this.ServiceService.getfunction                     
+  
+    this.ServiceService.client().subscribe(dataa=>{this.clientdetail=dataa})
+    // this.ServiceService.client().subscribe(this.dataa)       this method will not work
+  //without using json,http, observable displaying data at UI                  
+  //  this.data=this.ServiceService.getfunction       
   }
 
 }

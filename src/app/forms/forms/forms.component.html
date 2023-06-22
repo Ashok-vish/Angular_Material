@@ -25,7 +25,7 @@
 
   <h1>using reactive forms</h1>
 
-  <form  [formGroup]="login"  (submit)="submitdetail()">
+  <form  [formGroup]="login"  (ngSubmit)="submitdetail()">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="userlogin" formControlName="user">
