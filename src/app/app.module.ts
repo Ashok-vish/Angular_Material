@@ -31,6 +31,7 @@ import { ObservalComponent } from './observal/observal/observal.component';
 import { ServicComponent } from './services/servic/servic.component';
 import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 
 
 
@@ -53,6 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     CONTACTComponent,
     ServicComponent,
     DirectivetaskComponent,
+    PosthttpformComponent,
    
     
     

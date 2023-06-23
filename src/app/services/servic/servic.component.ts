@@ -16,7 +16,7 @@ export class ServicComponent implements OnInit {
 //  user=this.ServiceService.getfunction
 
 clientdetail:any=[]
-
+// userdetail:any=[]
 // data:any
 // dataa:any=[]
 
@@ -25,7 +25,9 @@ clientdetail:any=[]
     this.ServiceService.client().subscribe(dataa=>{this.clientdetail=dataa})
     // this.ServiceService.client().subscribe(this.dataa)       this method will not work
   //without using json,http, observable displaying data at UI                  
-  //  this.data=this.ServiceService.getfunction       
+  //  this.data=this.ServiceService.getfunction  
+  
+  // this.ServiceService.getfunction("clientdetail").subscribe(detail=>{this.userdetail=detail})
   }
 
 }

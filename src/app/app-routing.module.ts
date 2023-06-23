@@ -10,10 +10,11 @@ import { AdminComponent } from './admin/admin.component';
 import { adminGuardGuard } from './admin-guard.guard';
 import { FormsComponent } from './forms/forms/forms.component';
 import { SignupComponent } from './signup/signup.component';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 import { ObservalComponent } from './observal/observal/observal.component';
 import { ServicComponent } from './services/servic/servic.component';
 import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
+import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path:"directive", component:DirectivetaskComponent },
   { path:"service", component: ServicComponent },
   {path:"obs",component:ObservalComponent },
+  {path:"post",component:PosthttpformComponent },
   { path: "contact", component: CONTACTComponent },
   { path: "about", component: AboutComponent },
   { path: "task", component: TaskLifecycleComponent },
