@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  _url:string= "http://localhost:3000/posts"
+  _url: string = "http://localhost:3000/posts"
 
   // _url:string= "C:\Users\Dell\Desktop\angular task file\angular_material\db.json"
   constructor(private http: HttpClient) { }
 
-  client(){
-    return this.http.get(this._url) 
+  client() {
+    // header method
+    const httpheadrer = new HttpHeaders({
+      'content-text': 'application/json',
+      'authorization': 'auth123455i@qkwd'
+    })
+
+    return this.http.get(this._url, { headers:  httpheadrer })
     //above line will return you observable 
   }
 
@@ -24,30 +30,38 @@ export class ServiceService {
 
 
   // this method is part of post method and this was implemented in posthttpform component 
-  postfunction(useradd:any){
+  postfunction(useradd: any) {
     return this.http.post(this._url, useradd)
   }
-  
-  
+
+
 
   // this is the delete method of http part which was implement in posthttpcomponent
-  
-  deletemethod(id:any)
-  {
-    this.http.delete(this._url,id)
+
+  deletemethod(id: any) {
+    return this.http.delete("http://localhost:3000/posts/" +  id)
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+  // using httpparams method 
+
+  querymethod() {
+    // header method
+    const params = new HttpParams({
+      fromObject: {
+        query: 'ashok'
+
+      }
+
+    });
+    return this.http.get(this._url, { params: new HttpParams })
+  //above line will return you observable 
+  }
+
+
+
+
+
   // without using json,http, observable displaying data at UI  
   // getfunction = [
   //   {
@@ -71,7 +85,7 @@ export class ServiceService {
   //   // { "id": 1, "title": "lowdb is awesome" }
 
   // ]
-  
-  
+
+
 
 }

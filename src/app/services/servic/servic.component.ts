@@ -28,6 +28,25 @@ clientdetail:any=[]
   //  this.data=this.ServiceService.getfunction  
   
   // this.ServiceService.getfunction("clientdetail").subscribe(detail=>{this.userdetail=detail})
+
+
+  // delete method
+
+
+
+
+  };
+  
+  
+  remove(id: number){
+    this.ServiceService.deletemethod(id).subscribe(del=>{
+      console.log(del);
+      
+    })
+  };
+
+  paramscheck(){
+    this.ServiceService. querymethod().subscribe(man=>{console.log (man)})
   }
 
 }

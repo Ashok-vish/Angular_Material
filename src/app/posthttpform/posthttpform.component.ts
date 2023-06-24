@@ -27,6 +27,12 @@ export class PosthttpformComponent {
   deletetheuser(id:NgForm){
     this.serviceservice. deletemethod(id)
   }
+  
+
+  table:any
+  detail(){
+    return this.serviceservice. client().subscribe(info=>{{this.table=info}})
+  }
 
 
 }
