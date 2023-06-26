@@ -8,6 +8,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 export class ServiceService {
   _url: string = "http://localhost:3000/posts"
 
+  
+
   // _url:string= "C:\Users\Dell\Desktop\angular task file\angular_material\db.json"
   constructor(private http: HttpClient) { }
 
@@ -86,6 +88,10 @@ export class ServiceService {
 
   // ]
 
+
+  
+
+ 
 
 
 }

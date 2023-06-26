@@ -49,4 +49,6 @@ clientdetail:any=[]
     this.ServiceService. querymethod().subscribe(man=>{console.log (man)})
   }
 
+
+
 }

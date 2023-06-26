@@ -32,6 +32,7 @@ import { ServicComponent } from './services/servic/servic.component';
 import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PosthttpformComponent } from './posthttpform/posthttpform.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -75,10 +76,14 @@ import { PosthttpformComponent } from './posthttpform/posthttpform.component';
     MatGridListModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule
+    
     
 
   ],
+
+  
 
 
   providers: [],
