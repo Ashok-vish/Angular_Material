@@ -15,6 +15,7 @@ import { ObservalComponent } from './observal/observal/observal.component';
 import { ServicComponent } from './services/servic/servic.component';
 import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
 import { PosthttpformComponent } from './posthttpform/posthttpform.component';
+import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "task", component: TaskLifecycleComponent },
   {path:"forms" ,component:FormsComponent },
+  {path:"rxjs" , component:RxjsLearningComponent},
   { path: "admin", component: AdminComponent , canActivate: [adminGuardGuard]  },
   { path: "task", children: [{ path: "product", component: ProductComponent }] },
   {path: "signup" , component: SignupComponent },

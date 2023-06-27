@@ -29,10 +29,13 @@ export class ObservalComponent implements OnInit{
       }, 20000);
       
       
+      
      })
     this.data.subscribe((x)=>{this.orderstatus=x})
   }
 
+
+  
   
 
 }

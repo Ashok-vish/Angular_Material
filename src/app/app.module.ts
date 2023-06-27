@@ -33,6 +33,8 @@ import { DirectivetaskComponent } from './directive/directivetask/directivetask.
 import { HttpClientModule } from '@angular/common/http';
 import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 import { ToastrModule } from 'ngx-toastr';
+import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
+
 
 
 
@@ -56,6 +58,8 @@ import { ToastrModule } from 'ngx-toastr';
     ServicComponent,
     DirectivetaskComponent,
     PosthttpformComponent,
+    RxjsLearningComponent,
+
    
     
     
