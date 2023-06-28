@@ -16,6 +16,7 @@ import { ServicComponent } from './services/servic/servic.component';
 import { DirectivetaskComponent } from './directive/directivetask/directivetask.component';
 import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
+import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
 
 
 
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: "admin", component: AdminComponent , canActivate: [adminGuardGuard]  },
   { path: "task", children: [{ path: "product", component: ProductComponent }] },
   {path: "signup" , component: SignupComponent },
+  {path: "filter" , component: FilterRXJSComponent },
   { path: "lazy", loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
 
   

@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Observable, fromEvent, of } from 'rxjs';
+import { Observable, Subscription, from, fromEvent, interval, map, of, pipe, pluck, take, toArray } from 'rxjs';
 
 @Component({
   selector: 'app-rxjs-learning',
@@ -8,6 +8,60 @@ import { Observable, fromEvent, of } from 'rxjs';
   styleUrls: ['./rxjs-learning.component.css']
 })
 export class RxjsLearningComponent implements OnInit {
+
+
+  a = [{ name: 'ashok', age: 67 },
+  { name: 'ash', age: 23 },
+  { name: 'as', age: 44 }]
+
+  aarray$!: Observable<any>
+
+  sourcecode!: Subscription
+  plucknaj: any;
+  ngOnInit(): void {
+    this.student$.subscribe(data => { console.log(data) })
+    // oservable should alwas hav dollor sign 
+    this.studentname.subscribe(sname => { console.log(sname) })
+    this.sobsobject.subscribe(ssoject => { console.log(ssoject) })
+
+
+    //  28/06  interval method where we stop by assign variable give type subcription
+
+
+
+    const arrying = from(this.a)
+    //  arrying.pipe(toArray()).subscribe(w=>{console.log(w)})
+    arrying.pipe(
+      // map(data=>"using map function" + data),
+      toArray()).subscribe(w => { console.log(w) })
+
+    const source = interval(1000);
+    this.sourcecode = source.pipe(
+      take(2),
+      //we can use different mthod of rxjs just putting comma n all the method should be writen inside .pipe
+    ).subscribe(x => {
+      console.log(x);
+
+      if (x > 8) {
+        this.sourcecode.unsubscribe()
+      }
+
+    })
+
+    //  pluck method
+    from(this.user_pluckmethod).pipe(
+      // map(data => data.name),  //map is used for transformation of data in this example we frtcing value of property
+       pluck('job','title'),
+      toArray()
+    ).subscribe(ser => { console.log(ser) })
+
+    // const plucknajn=from(this.user_pluckmethod) // this 2 line is also give u same o/p as above line is giving(pluck metod)    
+    // plucknajn.subscribe(ser=>{console.log(ser)})
+
+
+  }
+
+
 
 
   searchingform = new FormGroup({
@@ -25,14 +79,10 @@ export class RxjsLearningComponent implements OnInit {
   @ViewChild('validate')
   validate!: ElementRef;
 
-
-
-
   // of using string
   studentname: Observable<string> = of('ram');
 
   //  of using for object
-
   sobject = {
     name: 'ashok',
     agr: 24,
@@ -50,18 +100,6 @@ export class RxjsLearningComponent implements OnInit {
   student$: Observable<string[]> = of(['mosh', 'ashok', 'ajfnf'])
   takemethod: any;
   // you can also store value of array in 1 variale(student)=[] n then  mention the variable name inside of (this.student)  
-
-  ngOnInit(): void {
-    this.student$.subscribe(data => { console.log(data) })
-    // oservable should alwas hav dollor sign 
-    this.studentname.subscribe(sname => { console.log(sname) })
-    this.sobsobject.subscribe(ssoject => { console.log(ssoject) })
-
-    // using 
-
-
-  }
-
   // define method of event using fromevent
 
   rxjsoperator() {
@@ -72,9 +110,51 @@ export class RxjsLearningComponent implements OnInit {
 
   }
 
-  readvalue(){
+  readvalue() {
     this.searchingform.value
   }
+
+  // 28/06/2023
+
+
+
+  // ex-1 pluck operation-> hamare data ki kise property ki singlr value ko deta h
+
+
+  user_pluckmethod = [{
+    name: 'nosjdf',
+    age: 23,
+    job: {
+      title: "front-end",
+      salary: 54
+    },
+  },
+  {
+    name: 'jndjfn',
+    age: 12,
+    job: {
+      title: "backend",   //nested object using for plusk and we can call nested value using- pluck('job','tit) 
+      salary: 54
+    },
+  },
+  {
+    name: 'oourni',
+    age: 34,
+    job: {
+      title: "angular",
+      salary: 54
+    },
+    
+
+    
+  
+}]
+
+
+
+
+
+
 
 
 }

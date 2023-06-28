@@ -34,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 import { ToastrModule } from 'ngx-toastr';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
+import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
 
 
 
@@ -59,6 +60,7 @@ import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
     DirectivetaskComponent,
     PosthttpformComponent,
     RxjsLearningComponent,
+    FilterRXJSComponent,
 
    
     
