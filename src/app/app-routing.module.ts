@@ -17,6 +17,7 @@ import { DirectivetaskComponent } from './directive/directivetask/directivetask.
 import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
+import { ConcatComponent } from './concat/concat.component';
 
 
 
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: "task", children: [{ path: "product", component: ProductComponent }] },
   {path: "signup" , component: SignupComponent },
   {path: "filter" , component: FilterRXJSComponent },
+  {path:"concat" , component:ConcatComponent },
   { path: "lazy", loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
 
   

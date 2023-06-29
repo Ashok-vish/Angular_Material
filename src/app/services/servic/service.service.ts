@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Iemploy } from 'src/app/filter-rxjs/filter-rxjs.component';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  _url: string = "http://localhost:3000/posts"
+  _url:any = "http://localhost:3000/posts"
+  _rxjsused: string = "http://localhost:3000/posts"
 
-  
+
 
   // _url:string= "C:\Users\Dell\Desktop\angular task file\angular_material\db.json"
   constructor(private http: HttpClient) { }
+
+  rxjs(){                                                     //implement on filter-rxjs
+    return this.http.get<Iemploy>(this._url)
+ }
 
   client() {
     // header method
@@ -89,7 +95,7 @@ export class ServiceService {
   // ]
 
 
-  
+
 
  
 

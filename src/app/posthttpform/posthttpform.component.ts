@@ -32,6 +32,7 @@ export class PosthttpformComponent {
   table:any
   detail(){
     return this.serviceservice. client().subscribe(info=>{{this.table=info}})
+    
   }
 
 

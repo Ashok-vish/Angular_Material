@@ -2,10 +2,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable, Subscription, from, fromEvent, interval, map, of, pipe, pluck, take, toArray } from 'rxjs';
 
+
 @Component({
   selector: 'app-rxjs-learning',
   templateUrl: './rxjs-learning.component.html',
-  styleUrls: ['./rxjs-learning.component.css']
+  styleUrls: ['./rxjs-learning.component.css'],
+  
 })
 export class RxjsLearningComponent implements OnInit {
 

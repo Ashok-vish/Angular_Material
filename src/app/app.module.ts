@@ -35,6 +35,7 @@ import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 import { ToastrModule } from 'ngx-toastr';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
+import { ConcatComponent } from './concat/concat.component';
 
 
 
@@ -61,6 +62,7 @@ import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
     PosthttpformComponent,
     RxjsLearningComponent,
     FilterRXJSComponent,
+    ConcatComponent,
 
    
     
