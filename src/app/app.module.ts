@@ -36,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
 import { ConcatComponent } from './concat/concat.component';
+import { SwitchmapComponent } from './switchmap/switchmap.component';
 
 
 
@@ -63,6 +64,7 @@ import { ConcatComponent } from './concat/concat.component';
     RxjsLearningComponent,
     FilterRXJSComponent,
     ConcatComponent,
+    SwitchmapComponent,
 
    
     

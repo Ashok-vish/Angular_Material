@@ -18,6 +18,7 @@ import { PosthttpformComponent } from './posthttpform/posthttpform.component';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
 import { ConcatComponent } from './concat/concat.component';
+import { SwitchmapComponent } from './switchmap/switchmap.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: "task", component: TaskLifecycleComponent },
   {path:"forms" ,component:FormsComponent },
   {path:"rxjs" , component:RxjsLearningComponent},
+  {path:"switch" , component:SwitchmapComponent},
   { path: "admin", component: AdminComponent , canActivate: [adminGuardGuard]  },
   { path: "task", children: [{ path: "product", component: ProductComponent }] },
   {path: "signup" , component: SignupComponent },
