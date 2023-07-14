@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-t-child',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./t-child.component.css']
 })
 export class TChildComponent {
+  // @Input() name="namee"
 
 }

@@ -37,6 +37,11 @@ import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
 import { ConcatComponent } from './concat/concat.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildrenComponent } from './children/children.component';
+
+
+
 
 
 
@@ -65,6 +70,8 @@ import { SwitchmapComponent } from './switchmap/switchmap.component';
     FilterRXJSComponent,
     ConcatComponent,
     SwitchmapComponent,
+    ParentComponent,
+    ChildrenComponent,
 
    
     
@@ -87,7 +94,8 @@ import { SwitchmapComponent } from './switchmap/switchmap.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule
+    ToastrModule,
+    MatSlideToggleModule
     
     
 

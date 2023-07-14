@@ -19,6 +19,8 @@ import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { FilterRXJSComponent } from './filter-rxjs/filter-rxjs.component';
 import { ConcatComponent } from './concat/concat.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildrenComponent } from './children/children.component';
 
 
 
@@ -43,6 +45,8 @@ const routes: Routes = [
   {path: "signup" , component: SignupComponent },
   {path: "filter" , component: FilterRXJSComponent },
   {path:"concat" , component:ConcatComponent },
+  {path:"parent",component:ParentComponent },
+  {path:"child" , component:ChildrenComponent },
   { path: "lazy", loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
 
   
